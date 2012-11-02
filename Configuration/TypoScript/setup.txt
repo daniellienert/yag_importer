@@ -1,0 +1,11 @@
+# Module configuration
+module.tx_yagimporter {
+	persistence {
+		storagePid = {$module.tx_yagimporter.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_yagimporter.view.templateRootPath}
+		partialRootPath = {$module.tx_yagimporter.view.partialRootPath}
+		layoutRootPath = {$module.tx_yagimporter.view.layoutRootPath}
+	}
+}

@@ -1,0 +1,50 @@
+<f:layout name="Backend" />
+<f:section name="content">
+
+	<f:form action="import">
+
+		<fieldset>
+			<legend>Import</legend>
+
+			<label for="entitiesPerRun">Entities per run</label>
+			<f:form.textField id="entitiesPerRun" name="entitiesPerRun" value="{importerConfig.entitiesPerRun}"/>
+
+			<br/>
+
+			<button type="submit" class="btn">Import</button>
+		</fieldset>
+	</f:form>
+
+
+	<table class="table">
+
+		<thead>
+		<tr>
+			<th>G2 Uid</th>
+			<th>G2 Title</th>
+			<th>G2 Description</th>
+			<th>YAG Gallery</th>
+			<th>YAG Album</th>
+			<th>Image Count</th>
+		</tr>
+		</thead>
+
+		<f:for each="{plainStructure}" key="key" as="entry">
+			<tbody>
+				<tr class="info">
+					<td>{key}</td>
+					<td>{entry.item.g_title}</td>
+					<td>{entry.item.g_description}</td>
+					<td>{entry.yagGalleryName}</td>
+					<td>{entry.yagAlbumName}</td>
+					<td>{entry.item.imageCount}</td>
+				</tr>
+			<tr class="info">
+					<td></td>
+					<td colspan="5">{entry.path}</td>
+			</tr>
+			</tbody>
+		</f:for>
+	</table>
+
+</f:section>

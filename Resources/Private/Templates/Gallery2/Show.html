@@ -1,0 +1,19 @@
+<f:layout name="Backend" />
+<f:section name="content">
+
+
+
+	<f:form action="saveDatabaseCredentials">
+		<fieldset>
+			<legend>Database Credentials</legend>
+			<label for="host">Server Name</label><f:form.textField id="host" name="host" value="{importerConfig.host}"/>
+			<label for="user">User</label><f:form.textField id="user" name="user"  value="{importerConfig.user}"/>
+			<label for="password">Password</label><f:form.textField id="password" name="password"  value="{importerConfig.password}"/>
+			<label for="databaseName">Database Name</label><f:form.textField id="databaseName" name="databaseName" value="{importerConfig.databaseName}"/>
+			<br />
+
+			<button type="submit" class="btn">Submit</button>
+		</fieldset>
+	</f:form>
+
+</f:section>

@@ -1,0 +1,26 @@
+<f:layout name="Backend" />
+<f:section name="content">
+
+
+
+	<f:form action="saveImportConfiguration">
+
+		<fieldset>
+			<legend>Import Configuration</legend>
+
+			<label for="importRootPath">Import Root Path</label>
+			<f:form.textField id="importRootPath" name="importRootPath" value="{importerConfig.importRootPath}"/>
+
+			<label for="importRootUid">Import Root Node</label>
+			<f:form.select id="importRootUid" name="importRootUid" options="{fullTree}" value="{importerConfig.importRootUid}"></f:form.select>
+
+			<label for="targetPid">Target PID</label>
+			<f:form.textField id="targetPid" name="targetPid" value="{importerConfig.targetPid}"/>
+
+			<br />
+
+			<button type="submit" class="btn">Preview</button>
+		</fieldset>
+	</f:form>
+
+</f:section>
